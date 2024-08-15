@@ -46,7 +46,7 @@ export class Scanner extends EventEmitter {
         for (const j in serviceData) {
           let b = serviceData[j].data
 
-          let temp = b.readInt16LE(6, true) / 100.0;
+          let temp = b.readInt16LE(6, true) / 10.0;
           let humi = b.readInt16LE(8, true) / 100.0;
           let bat = b.readUInt8(12);
 
